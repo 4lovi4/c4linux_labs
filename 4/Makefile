@@ -1,5 +1,6 @@
 CC=gcc
 N=solution
+HELP=help
 
 $(N) : $(N).o
 	$(CC) $^ -o $@
@@ -7,6 +8,9 @@ $(N) : $(N).o
 $(N).o : $(N).c
 	$(CC) -c $^ 
 
+$(HELP) : $(HELP).c
+	$(CC) $^ -o $@
+
 clean : 
-	rm -rf *.o $(N) $(N1)
+	rm -rf *.o $(N)
 
